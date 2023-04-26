@@ -1,0 +1,82 @@
+[
+    {
+        "id": "3922ee685311af3b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ffecb9d98492026f",
+        "type": "rpi-sensehat in",
+        "z": "3922ee685311af3b",
+        "name": "",
+        "motion": false,
+        "env": true,
+        "stick": false,
+        "x": 330,
+        "y": 2060,
+        "wires": [
+            [
+                "0d4e0c8ddb628b0e"
+            ]
+        ]
+    },
+    {
+        "id": "0d4e0c8ddb628b0e",
+        "type": "delay",
+        "z": "3922ee685311af3b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "10",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 580,
+        "y": 2040,
+        "wires": [
+            [
+                "cd84fc8b2dcca7d1",
+                "a1c90760c62980c6"
+            ]
+        ]
+    },
+    {
+        "id": "cd84fc8b2dcca7d1",
+        "type": "debug",
+        "z": "3922ee685311af3b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "a1c90760c62980c6",
+        "type": "google-cloud-gcs-read",
+        "z": "3922ee685311af3b",
+        "keyFilename": "",
+        "list": false,
+        "toBase64": false,
+        "name": "",
+        "x": 800,
+        "y": 2140,
+        "wires": [
+            []
+        ]
+    }
+]
